@@ -1,5 +1,8 @@
 #define CATCH_CONFIG_RUNNER
 #include "../Catch-master/include/catch.hpp"
+// single include auch möglich... 
+// https://raw.githubusercontent.com/philsquared/Catch/develop/single_include/catch.hpp
+
 // #include <cmath>
 #include <iostream>
 #include <string>
@@ -57,6 +60,20 @@ TEST_CASE("miles_to_kilometer_converter","[milesToKilometer]")
 	REQUIRE(milesToKilometer(300)==Approx(482.8));
 }
 
+TEST_CASE("sort_integers","[sortIntegers]")
+{
+	REQUIRE(sortIntegers(3,2,1)=="1 < 2 < 3");
+	REQUIRE(sortIntegers(1,1,1)=="1 < 1 < 1");
+	REQUIRE(sortIntegers(99,188,2)=="2 < 99 < 188");
+	REQUIRE(sortIntegers(0,1,0)=="0 < 0 < 1");
+	// int a = 99;
+	// int b = 1;
+	// int c = 9;
+	// sortIntegers(a,b,c);
+	// REQUIRE(a==1);
+	// REQUIRE(b==9);
+	// REQUIRE(c==99);
+}
 
 
 int main (int argc, char* argv[])

@@ -18,6 +18,11 @@ add_executable(miles
 				${HEADER_FILES}
 )
 
+add_executable(sort_int
+				sort_int.cpp 
+				utility.cpp
+				${HEADER_FILES}
+)
 
 add_custom_command(
 	OUTPUT test.txt

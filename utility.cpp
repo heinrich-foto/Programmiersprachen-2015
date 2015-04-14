@@ -3,19 +3,25 @@
 #include <string>
 #include "utility.hpp"
 
+// unsigned factorial (unsigned n)
+// // Implementierung Itterativ
+// { 
+// 	int Ausgabe = 1;
+// 	if (n == 0)
+// 	{
+// 		return 1;
+// 	}
+// 	for (int i = 1; i <= n; ++i)
+// 	{
+// 		Ausgabe = Ausgabe * i;
+// 	}
+// 	return Ausgabe;
+// }
+
 unsigned factorial (unsigned n)
-// Implementierung Itterativ
-{ 
-	int Ausgabe = 1;
-	if (n == 0)
-	{
-		return 1;
-	}
-	for (int i = 1; i <= n; ++i)
-	{
-		Ausgabe = Ausgabe * i;
-	}
-	return Ausgabe;
+// Implementierung Rekursiv
+{	
+	return n > 1 ? factorial(n-1)*n : 1;
 }
 
 unsigned int checksum(unsigned int Zahl) 
@@ -92,4 +98,23 @@ double milesToKilometer (double miles)
 // Konvertiert Meilen in Kilometer 
 { 
 	return fabs(miles) * 1.609344;
+}
+
+void swap(int & x, int & y)
+// Tauscht Variable x und y per Reference
+{ //tausche x und y
+	y = x + y;
+	x = y - x;
+	y = y - x;
+}
+
+std::string sortIntegers(int a, int b, int c)
+// Sortiert Variablen a, b, c ihrer Wertigkeit [per Reference] -> wurde geändert in per Value
+// und gibt dieses als Ostream zurück.
+{
+	if (c < a) { swap(c,a); }
+	if (b < a) { swap(b,a); }
+	if (c < b) { swap(c,b); }
+	
+	return std::to_string(a) + " < " + std::to_string(b) + " < " + std::to_string(c);
 }
