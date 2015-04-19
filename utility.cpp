@@ -42,7 +42,7 @@ bool is_prime (unsigned int Zahl)
 // sich um eine Primzahl handelt.
 {
 	if (Zahl == 1 || Zahl == 2)
-	{ // 1 und 2 sind Primzahlen.
+	{ // 1 und 2 sind Primzahlen. (Auch wenn 1 keine Primzahl ist.)
 		return true;
 	}
 	if ( Zahl%2 == 0 || Zahl <= 0)
