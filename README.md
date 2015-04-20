@@ -1,5 +1,21 @@
 # Programmiersprachen Übung aus dem Sommersemester-2015
 
+`g++ -c helloworld.cpp` kompiliert den Quelltext, es entsteht eine Objektdatei `helloworld.o`. Anschließend müssen die Objektdateien zu einem ausführbaren Programm gelinkt werden. 
+`g++ helloworld.o -o helloworld`
+Ausgeführt wird das Programm dann einfach per `./helloworld`
+
+
+
+## Initialisierung und Zuweisung
+`int name = 10;` Variable wird deklariert und gesetzt (Speicher wird mit initialem Wert gesetzt.)
+`name = 20;` Einer Variable wird ein neuer Wert zugewiesen.
+
+## Deklaration und Definition
+`Deklaration` Dem Compiler wird eine Funktion, Objekt, Variable angemeldet. Der Bezeichner wird reserviert.
+`Definition` stellt die Funktionalität her. Dem Compiler wird mitgeteilt, dass etwas tatsächlich angelegt werden soll.
+
+
+# Glossar
 - **C++**   Ist eine Programmiersprache. 1979 von Bjarne Stroustrup bei AT&T als Erweiterung der Sprache C entwickelt. C++ ermöglicht sowohl die effiziente und maschinennahe Programmierung als auch eine Programmierung auf hohem Abstraktionsniveau.
 - **Quellcode**   (source code) Menschenlesbarer in einer Programmiersprache geschriebener Text eines Computerprogramms.
 - **Compiler**   (zusammentragen) Ist ein Programm, welches Quellcode einer Hochsprache in Maschienencode (Assamblercode, Bytecode…) übersetzt.
