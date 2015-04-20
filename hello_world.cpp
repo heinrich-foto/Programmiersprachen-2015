@@ -7,7 +7,7 @@ int main () {
 	for (int i=1; i<=30; ++i)
 	{
 		std::cout << std::sqrt(i);
-		(i<30)? std::cout << "; " std::cout << std::endl;
+		(i<30)? std::cout << "; " :  std::cout << std::endl;
 	}
 	return 0; 
 
